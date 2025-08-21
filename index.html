@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gordon the Guinea Pig: Poop Blaster 💩🐹</title>
+  <meta name="description" content="Protect Gordon the guinea pig by blasting scary emojis with 💩 cannons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="bar">
+      <h1>Gordon the Guinea Pig: Poop Blaster 💩🐹</h1>
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="restartBtn" class="btn primary">Restart</button>
+        <button id="muteBtn" class="btn" aria-label="Mute">🔊 Sound</button>
+      </div>
+    </header>
+
+    <section class="stage">
+      <canvas id="game"></canvas>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="panel">
+          <h2 id="overlayTitle">How to Play</h2>
+          <ul>
+            <li>Move your mouse/trackpad (or touch) to aim Gordon’s arm-cannons.</li>
+            <li>Click or lift your finger to shoot 💩 at scary emojis <span class="inline">👹 💀 😈</span>.</li>
+            <li>Avoid hitting good emojis <span class="inline">🍎 😃 😍</span> — those are Gordon’s favorites.</li>
+            <li>Letting a scary emoji pass costs 1 ❤️. Lose all hearts and it’s game over.</li>
+          </ul>
+          <div class="panel-actions">
+            <button id="overlayStart" class="btn primary wide">Start Game</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="pauseCurtain" class="overlay hidden">
+        <div class="panel center">
+          <h2 id="pauseTitle">Paused</h2>
+          <p id="pauseInfo">Score: 0 • Level: 1</p>
+          <div class="panel-actions row">
+            <button id="resumeBtn" class="btn">Resume</button>
+            <button id="pauseRestart" class="btn primary">Restart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="tips">
+      <p><strong>Tip:</strong> Trackpad users — hover near a target and click to fire. On mobile, drag to aim and lift to shoot.</p>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
