@@ -84,6 +84,9 @@
     state.enemies.length=0; state.bullets.length=0; state.lastSpawn=0;
     state.mouse.x=state.gp.x; state.mouse.y=state.gp.y-120;
     ensureAudio(); state.paused=false; state.running=true;
+  // Hide any overlays so the game canvas is visible when starting
+  if (overlay && overlay.classList) overlay.classList.add('hidden');
+  if (pauseCurtain && pauseCurtain.classList) pauseCurtain.classList.add('hidden');
   }
   function restartGame(){ startGame(); }
   function togglePause(){ if(!state.running) return; state.paused=!state.paused; state.message = state.paused? "Paused — Gordon is waiting…" : "Game on!"; }
